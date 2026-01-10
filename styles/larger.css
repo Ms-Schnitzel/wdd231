@@ -1,0 +1,101 @@
+@media screen and (min-width: 800px) {
+
+  /* ==============  Header  ============== */
+
+  header {
+    padding: 1em 3em 1em 5em;
+  }
+
+  header span {
+    font-size: 1.5em;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    position: relative;
+  }
+
+  .navbar a {
+    margin: 10px;
+    padding: 7px;
+    font-size: 1.5em;
+  }
+
+  /* ==============  Body  ============== */
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 3fr;
+  }
+
+  main h1 {
+    grid-column: span 3;
+  }
+
+  section {
+    margin: 2em 1em;
+    padding-bottom: 1em;
+  }
+
+  .about {
+    grid-column: 1 / 3;
+  }
+
+  .photo {
+    grid-column: 3 / 4;
+    text-align: center;
+  }
+
+  .certificate {
+    grid-column: span 3;
+  }
+
+  section img {
+    width: 90%;
+  }
+
+  /* ==============  Footer  ============== */
+
+  footer {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr;
+  }
+
+  #dates {
+    grid-column: 4 / 6;
+  }
+
+  .socials {
+    padding: 20px;
+    width: 5rem;
+  }
+}
+
+
+/* ==============  Courses  ============== */
+
+.certificate {
+  padding: 0 30px 30px;
+}
+
+.certificate h2 {
+  margin: 0 -30px 10px;
+}
+
+.certificate button {
+  font-size: 2em;
+}
+
+#course-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.course-box {
+  grid-column: span 1;
+  font-size: 1em;
+  width: 60%;
+}

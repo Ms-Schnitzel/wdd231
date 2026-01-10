@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zachery Nielsen's Portfolio</title>
+  <meta name="description" content="Home page of Zachery Nielsen's portfolio for Pathway course WDD 231">
+  <meta name="author" content="Zachery Nielsen">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/small.css">
+  <link rel="stylesheet" href="/styles/larger.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+  <script src="/scripts/navigation.js" defer></script>
+  <script src="/scripts/course.js" defer></script>
+  <script src="/scripts/date.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="/images/logo.jpg" alt="portfolio logo" id="logo">
+    <span>Zachery Nielsen</span>
+    <nav>
+      <a id="menu" href="#"></a>
+      <ul class="navbar">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="#" id="chamber">Chamber Project</a></li>
+        <li><a href="#" id="final">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Home</h1>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>My name is Zac, and I am from the state of Utah in the United States.  Presently, I am working as the staff auditor at my local credit union while studying for a degree in Software Development.  I love problem solving and have found a passion for writing programs that can serve specific needs and processes.  My time away from work and school is spent with my family and puppy where I can.  I'm a pretty big nerd, I love both Star Wars and the Lord of the Rings.</p>
+    </section>
+    <section class="photo">
+      <h2>Student Photo</h2>
+      <img src="/images/personal_pic.png" alt="Student pic">
+    </section>
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+      <button id="all">All</button>
+      <button id="cse">CSE</button>
+      <button id="wdd">WDD</button>
+      <div id="course-grid"></div>
+      <h3 class="tally">Credits required for completion: <span id="credits"></span></h3>
+    </section>
+  </main>
+  <footer>
+    <a href="https://github.com/Ms-Schnitzel"><img src="/images/github.svg" alt="Github logo" class="socials"></a>
+    <a href="https://www.linkedin.com/in/zachery-nielsen-a2436523b/"><img src="/images/linkedin.svg" alt="Instagram logo" class="socials"></a>
+    <a href="https://www.instagram.com"><img src="/images/instagram.svg" alt="LinkedIn logo" class="socials"></a>
+    <div id="dates">
+      <p>&copy; <span id="currentYear"></span> | Zachery Nielsen | Utah, USA</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

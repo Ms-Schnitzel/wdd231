@@ -1,0 +1,182 @@
+:root {
+  --primary: #03045e;
+  --secondary: #00b4d8;
+}
+
+* {
+  font-family: "Tinos", serif;
+}
+body {
+  max-width: 1200px;
+}
+
+/* ==============  Header  ============== */
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1em 1em 1em 5em;
+  /* padding: 1em 3em 1em 5em; */
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  position: absolute;
+  left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border: solid lightgray 2px;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.navbar {
+  list-style: none;
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+#menu {
+  display: block;
+  padding-bottom: 4px;
+  text-decoration: none;
+  font-size: 2em;
+  border-radius: 50%;
+  width: 32px;
+}
+
+  #menu::before {
+    content: "≡";
+  }
+
+  #menu.show::before {
+    content: "X";
+  }
+
+/* ==============  Body  ============== */
+
+main {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr 2fr 3fr;
+}
+section {
+  margin: 2em 0;
+  background-color: var(--secondary);
+}
+
+section h2 {
+  background-color: var(--primary);
+  color: white;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+section p {
+  margin: 0;
+  padding: 1em;
+}
+
+.photo {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+section img {
+  width: 70%;
+}
+
+
+/* ==============  Footer  ============== */
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  border-radius: 50%;
+  width: 3em;
+}
+
+#dates {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.socials {
+  width: 4rem;
+  margin: 5px;
+  padding-top: 20px;
+  grid-column: span 1;
+}
+
+
+/* ==============  Courses  ============== */
+
+.certificate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.certificate h2 {
+  grid-column: span 3;
+}
+
+.certificate button {
+  grid-column: span 1;
+  background: black;
+  color: white;
+  border: solid 3px white;
+  border-radius: 25px;
+  margin: 5px 1em;
+}
+
+#course-grid{
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.course-box {
+  text-align: center;
+  background: gray;
+  color: white;
+  border: solid 2px black;
+  border-radius: 25px;
+  width: 75%;
+  margin: 10px auto;
+}
+
+.completed {
+  background: var(--primary);
+  border: solid 3px white;
+}
+
+.tally {
+  grid-column: span 3;
+  text-align: center;
+}
