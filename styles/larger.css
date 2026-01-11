@@ -73,29 +73,32 @@
     padding: 20px;
     width: 5rem;
   }
+
+  /* ==============  Courses  ============== */
+
+  .certificate {
+    padding: 0 30px 30px;
+  }
+
+  .certificate h2 {
+    margin: 0 -30px 10px;
+  }
+
+  .certificate button {
+    font-size: 2em;
+  }
+
+  #course-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .course-box {
+    grid-column: span 1;
+    font-size: 1em;
+    width: 60%;
+  }
 }
 
 
-/* ==============  Courses  ============== */
 
-.certificate {
-  padding: 0 30px 30px;
-}
 
-.certificate h2 {
-  margin: 0 -30px 10px;
-}
-
-.certificate button {
-  font-size: 2em;
-}
-
-#course-grid {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.course-box {
-  grid-column: span 1;
-  font-size: 1em;
-  width: 60%;
-}
