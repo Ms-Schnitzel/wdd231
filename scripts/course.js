@@ -161,7 +161,7 @@ const setCredits = (subject) => {
   let total = 0;
   if (subject === "all") {
     for (let i = 0; i < courses.length; i++) {
-      if (courses[i].completed === false) {
+      if (courses[i].completed === true) {
         total += courses.length
       }
     }
@@ -169,7 +169,7 @@ const setCredits = (subject) => {
   }
   if (subject === "cse") {
     for (let i = 0; i < courses.length; i++) {
-      if (courses[i].subject === "CSE" && courses[i].completed === false) {
+      if (courses[i].subject === "CSE" && courses[i].completed === true) {
         total += courses.length
       }
     }
@@ -177,7 +177,7 @@ const setCredits = (subject) => {
   }
   if (subject === "wdd") {
     for (let i = 0; i < courses.length; i++) {
-      if (courses[i].subject === "WDD" && courses[i].completed === false) {
+      if (courses[i].subject === "WDD" && courses[i].completed === true) {
         total += courses.length
       }
     }
