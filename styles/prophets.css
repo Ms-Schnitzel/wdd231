@@ -1,0 +1,23 @@
+#cards {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
+section {
+  border: solid black 2px;
+  background-color: darkgray;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 2em;
+  color: darkblue;
+}
+
+img {
+  margin: 0 auto;
+  border: solid black 2px;
+}
