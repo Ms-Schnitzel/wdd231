@@ -1,0 +1,54 @@
+@media screen and (min-width: 800px) {
+
+/* =============== Header =============== */
+
+  header {
+    padding: 1em 3em 1em 5em;
+  }
+
+  header span {
+    font-size: 1.5em;
+  }
+  
+  #menu {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    position: relative;
+  }
+
+  .navbar a {
+    margin: 10px;
+    padding: 7px;
+    font-size: 1.5em;
+  }
+
+  /* ==============  Body  ============== */
+
+ .grid-view {
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+
+  .buttons {
+    grid-column: span 3;
+  }
+ } 
+
+  /* ==============  Footer  ============== */
+
+  footer {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr;
+  }
+
+  #dates {
+    grid-column: 4 / 6;
+  }
+
+  .socials {
+    padding: 20px;
+    width: 5rem;
+  }
+
+}

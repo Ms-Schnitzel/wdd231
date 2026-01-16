@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Cafe Rio",
+    "address": "5567 High Market Dr, West Valley City, UT 84120",
+    "phone": "801-613-4000",
+    "url": "https://www.caferio.com/",
+    "img": "./images/cafe-rio.jpg",
+    "level": "2",
+    "other": ""
+  },
+
+  {
+    "name": "Cyprus Credit Union",
+    "address": "2769 S 5600 W, West Valley City, UT 84120",
+    "phone": "801-260-7600",
+    "url": "https://www.cypruscu.com/",
+    "img": "./images/cyprus.jpg",
+    "level": "3",
+    "other": ""
+  },
+
+  {
+    "name": "Walmart",
+    "address": "3180 S 5600 W, West Valley City, UT 84120",
+    "phone": "801-966-2986",
+    "url": "https://www.walmart.com/",
+    "img": "./images/walmart.jpg",
+    "level": "1",
+    "other": ""
+  },
+
+  {
+    "name": "West Valley Rec Center",
+    "address": "5415 W 3100 S, West Valley City, UT 84120",
+    "phone": "801-955-4000",
+    "url": "http://www.wvcfitness.com/",
+    "img": "./images/rec-center.jpg",
+    "level": "3",
+    "other": ""
+  },
+
+  {
+    "name": "Ross",
+    "address": "3645 Constitution Blvd, West Valley City, UT 84119",
+    "phone": "801-966-4283",
+    "url": "https://www.rossstores.com/",
+    "img": "./images/ross.jpg",
+    "level": "2",
+    "other": ""
+  },
+
+  {
+    "name": "Cinemark",
+    "address": "5412 High Market Dr, West Valley City, UT 84119",
+    "phone": "801-297-1708",
+    "url": "https://www.cinemark.com/",
+    "img": "./images/cinemark.jpg",
+    "level": "1",
+    "other": ""
+  },
+
+  {
+    "name": "Target",
+    "address": "5518 High Market Dr, West Valley City, UT 84120",
+    "phone": "801-449-8022",
+    "url": "https://www.target.com/",
+    "img": "./images/target.jpg",
+    "level": "2",
+    "other": ""
+  }
+]

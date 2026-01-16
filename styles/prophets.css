@@ -12,12 +12,12 @@ section {
   padding: 1em;
 }
 
-h2 {
+.grid h2 {
   font-size: 2em;
   color: darkblue;
 }
 
-img {
+.grid img {
   margin: 0 auto;
   border: solid black 2px;
 }

@@ -1,0 +1,189 @@
+:root {
+  --primary: #023e8a;
+  --secondary: #00b4d8;
+  --background: "";
+  --text: "";
+}
+
+* {
+  font-family: "Tinos", serif;
+}
+body {
+  max-width: 1200px;
+}
+
+/* =============== Header =============== */
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1em 1em 1em 5em;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  position: absolute;
+  left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border: solid lightgray 2px;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.navbar {
+  list-style: none;
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+#menu {
+  display: block;
+  padding-bottom: 4px;
+  text-decoration: none;
+  font-size: 2em;
+  border-radius: 50%;
+  width: 32px;
+}
+
+  #menu::before {
+    content: "≡";
+  }
+
+  #menu.show::before {
+    content: "X";
+  }
+
+/* ==============  Body  ============== */
+
+#grid {
+  display: grid;
+  grid-gap: 15px;
+  margin: 15px;
+}
+
+.url a {
+  color: blue;
+}
+
+.grid-view {
+  grid-template-columns: 1fr;
+
+  .company-card {
+    display: grid;
+    grid-column: span 1;
+    grid-template-columns: 1fr 1fr;
+    border: solid black 2px;
+    background-color: darkgray;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .name {
+    font-size: 2em;
+    grid-column: span 2;
+    /* color: darkblue; */
+  }
+
+  .address {
+    grid-column: span 2;
+  }
+
+  .level {
+    grid-column: span 2;
+  }
+
+  .company-img {
+    grid-column: span 2;
+    margin: 0 auto;
+    border: solid black 2px;
+    width: 290px;
+  }
+
+  .buttons {
+    grid-column: span 1;
+    margin: auto;
+    font-size: 2rem;
+    background: black;
+    padding: 30px;
+  }
+
+}
+
+.list-view {
+  grid-template-columns: 1fr;
+
+  .company-card {
+    display: flex;
+    border: solid black 2px;
+    background-color: darkgray;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .company-img {
+    display: none;
+  }
+
+  .buttons{
+    grid-column: span 1;
+    margin: auto;
+    font-size: 2rem;
+    background: black;
+    padding: 30px;
+  }
+}
+
+
+
+
+
+
+
+/* ==============  Footer  ============== */
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  border-radius: 50%;
+  width: 3em;
+}
+
+#dates {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.socials {
+  width: 4rem;
+  margin: 5px;
+  padding-top: 20px;
+  grid-column: span 1;
+}

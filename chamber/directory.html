@@ -14,22 +14,49 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/foo.css">
-    <!-- <script src="./scripts/foo.js" defer></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" defer>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet" defer>
+    <script src="./scripts/navigation.js" defer></script>
     <script src="./scripts/date.js" defer></script>
+    <script src="./scripts/grid.js" defer></script>
   </head>
   <body>
     <header>
-      ***
+      <div>
+        <img src="./images/logo.jpg" alt="chamber logo" id="logo">
+        <h2>West Valley City Chamber of Commerce</h2>
+      </div>
+      <nav>
+        <a id="menu" href="#"></a>
+        <ul class="navbar">
+          <li><a href="directory.html" id="home">Home</a></li>
+          <li><a href="#" id="directory">Directory</a></li>
+          <li><a href="#" id="join">Join</a></li>
+          <li><a href="#" id="discover">Discover</a></li>
+        </ul>        
+      </nav>
+      
+
     </header>
+
     <main>
-      ***
+      <div id="grid" class="grid-view">
+        <section class="buttons">
+          <button id="grid-btn">Grid</button>
+          <button id="list-btn">List</button>
+        </section>
+      </div>
     </main>
+
     <footer>
-      ***
+      <a href="https://github.com/Ms-Schnitzel"><img src="./images/github.svg" alt="Github logo" class="socials"></a>
+      <a href="https://www.linkedin.com/in/zachery-nielsen-a2436523b/"><img src="./images/linkedin.svg" alt="Instagram logo" class="socials"></a>
+      <a href="https://www.instagram.com"><img src="./images/instagram.svg" alt="LinkedIn logo" class="socials"></a>
+      <div id="dates">
+        <p>&copy; <span id="currentYear"></span> | Zachery Nielsen | Utah, USA</p>
+        <p id="lastModified"></p>
+      </div>
     </footer>
   </body>
 </html>
