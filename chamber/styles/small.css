@@ -72,6 +72,10 @@ nav a {
 
 /* ==============  Body  ============== */
 
+h1 {
+  text-align: center;
+}
+
 #grid {
   display: grid;
   grid-gap: 15px;
