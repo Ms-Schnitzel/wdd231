@@ -40,13 +40,15 @@
  } 
 
  .index-grid {
-
+  grid-template-columns: 1fr 1fr;
+  
   h1 {
-    grid-column: span 1fr;
+    grid-column: 1 / 2;
   }
 
   .cta {
-    grid-column: span 1fr;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
   #spotlight {

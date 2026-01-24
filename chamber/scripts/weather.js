@@ -11,10 +11,20 @@ const tempTwo = document.querySelector("#temp-two");
 const descTwo = document.querySelector("#desc-two");
 const tempThree = document.querySelector("#temp-three");
 const descThree = document.querySelector("#desc-three");
+const dateOne = document.querySelector("#date-one");
+const dateTwo = document.querySelector("#date-two");
+const dateThree = document.querySelector("#date-three");
 
 const urlToday = "https://api.openweathermap.org/data/2.5/weather?lat=40.69&lon=-112.00&units=imperial&appid=88b882b7e6cb8fdb06fe774538b61685";
 
 const urlForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=40.69&lon=-112.00&units=imperial&appid=88b882b7e6cb8fdb06fe774538b61685";
+
+const forecastOne = new Date(today);
+forecastOne.setDate(today.getDate() + 1);
+const forecastTwo = new Date(today);
+forecastTwo.setDate(today.getDate() + 2);
+const forecastThree = new Date(today);
+forecastThree.setDate(today.getDate() + 3);
 
 async function apiToday() {
   try {
@@ -69,3 +79,7 @@ function displayForecast(data) {
 
 apiToday();
 apiForecast();
+
+dateOne.innerHTML = `${forecastOne.toLocaleDateString('en-us', {year: 'numeric', month: 'long', day: '2-digit'})}`;
+dateTwo.innerHTML = `${forecastTwo.toLocaleDateString('en-us', {year: 'numeric', month: 'long', day: '2-digit'})}`;
+dateThree.innerHTML = `${forecastThree.toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: '2-digit' })}`;
