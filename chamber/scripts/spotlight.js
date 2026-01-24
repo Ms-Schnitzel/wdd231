@@ -42,7 +42,7 @@ const displayCompanies = (data) => {
 }
 
 const createCompCard = (company) => {
-  let card = document.createElement("div");
+  let card = document.createElement("li");
   card.classList.add("sub-card");
   let name = document.createElement("h2");
   name.classList.add("name")

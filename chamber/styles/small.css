@@ -180,7 +180,8 @@ h1 {
     border: solid 2px black;
     padding: 0.5rem;
     border-radius: 25px;
-    background-color: darkgray;
+    background-color: var(--secondary);
+    color: black;
   }
 
   .home-card {
@@ -251,6 +252,11 @@ h1 {
 
   #spotlight .sub-card {
     padding: 10px;
+  }
+
+  #spotlight img {
+    border: solid 2px black;
+    width: 290px;
   }
 }
 
