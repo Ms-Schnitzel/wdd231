@@ -5,7 +5,7 @@
     "phone": "801-613-4000",
     "url": "https://www.caferio.com/",
     "img": "./images/cafe-rio.jpg",
-    "level": "2",
+    "level": "Silver",
     "other": ""
   },
 
@@ -15,7 +15,7 @@
     "phone": "801-260-7600",
     "url": "https://www.cypruscu.com/",
     "img": "./images/cyprus.jpg",
-    "level": "3",
+    "level": "Gold",
     "other": ""
   },
 
@@ -25,7 +25,7 @@
     "phone": "801-966-2986",
     "url": "https://www.walmart.com/",
     "img": "./images/walmart.jpg",
-    "level": "1",
+    "level": "Bronze",
     "other": ""
   },
 
@@ -35,7 +35,7 @@
     "phone": "801-955-4000",
     "url": "http://www.wvcfitness.com/",
     "img": "./images/rec-center.jpg",
-    "level": "3",
+    "level": "Gold",
     "other": ""
   },
 
@@ -45,7 +45,7 @@
     "phone": "801-966-4283",
     "url": "https://www.rossstores.com/",
     "img": "./images/ross.jpg",
-    "level": "2",
+    "level": "Silver",
     "other": ""
   },
 
@@ -55,7 +55,7 @@
     "phone": "801-297-1708",
     "url": "https://www.cinemark.com/",
     "img": "./images/cinemark.jpg",
-    "level": "1",
+    "level": "Bronze",
     "other": ""
   },
 
@@ -65,7 +65,7 @@
     "phone": "801-449-8022",
     "url": "https://www.target.com/",
     "img": "./images/target.jpg",
-    "level": "2",
+    "level": "Silver",
     "other": ""
   }
 ]

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Home Page</title>
+    <meta name="description" content="Home page for the West Valley City Chamber of Commerse where the community can navigate, reach out, discover, and learn how to join today!">
+    <meta name="author" content="Zachery Nielsen">
+    <meta property="og:title" content="Chamber of Commerce homepage for West Valley City">
+    <meta property="og:description" content="West Valley City Chamber of Commerce home page, providing networking and outreach opportunities for the community.">
+    <meta property="og:image" content="https://ms-schnitzel.github.io/wdd231/chamber/images/meta-logo.jpg">
+    <meta property="og:url" content="https://ms-schnitzel.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/date.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
+    <script src="./scripts/spotlight.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./images/logo.jpg" alt="chamber logo" id="logo">
+        <h2>West Valley City Chamber of Commerce</h2>
+      </div>
+      <nav>
+        <a id="menu" href="#"></a>
+        <ul class="navbar">
+          <li><a href="index.html" id="home">Home</a></li>
+          <li><a href="directory.html" id="directory">Directory</a></li>
+          <li><a href="#" id="join">Join</a></li>
+          <li><a href="#" id="discover">Discover</a></li>
+        </ul>        
+      </nav>
+    </header>
+
+    <main>
+      <img id="hero" src="./images/wvc-hero.jpg">
+      <div id="grid" class="index-grid">
+        <h1>Home</h1>
+        <p class="cta">Looking to be more involved in your community? <a href="#">Join today!</a></p>
+        <section id="events" class="home-card">
+          <h2>Events</h2>
+          <ul>
+            <li class="sub-card">
+              <h5>Community Event 1</h5>
+              <img src="https://picsum.photos/200/100" alt="event-1">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi nisi unde non, sint adipisci.</p>
+            </li>
+            <li class="sub-card">
+              <h5>Community Event 2</h5>
+              <img src="https://picsum.photos/200/100" alt="event-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi nisi unde non, sint adipisci.</p>
+            </li>
+            <!-- <li class="sub-card">
+              <h5>Community Event 3</h5>
+              <img src="https://picsum.photos/200/100" alt="event-3">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi nisi unde non, sint adipisci.</p>
+            </li> -->
+          </ul>
+        </section>
+        <section id="weather" class="home-card">
+          <h2>Weather</h2>
+          <ul>
+            <li class="sub-card">
+              <h5>Current Forecast</h5>
+              <p id="temp"></p>
+              <img id="icon" alt="forecast-icon">
+              <figcaption id="description"></figcaption>
+            </li>
+            <li id="forecast" class="sub-card">
+              <h5>Three-Day Forecast</h5>
+              <div id="day-one" class="">
+                <p id="date-one"></p>
+                <p id="temp-one"></p>
+                <p id="desc-one"></p>
+              </div>
+              <div id="day-two" class="">
+                <p id="date-two"></p>
+                <p id="temp-two"></p>
+                <p id="desc-two"></p>
+              </div>
+              <div id="day-three" class="">
+                <p id="date-three"></p>
+                <p id="temp-three"></p>
+                <p id="desc-three"></p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="spotlight" class="home-card">
+          <h2>Community Spotlight</h2>
+          <ul>
+            <!-- <li class="sub-card"></li>
+            <li class="sub-card"></li> -->
+          </ul>
+        </section>
+      </div>
+      
+    </main>
+
+    <footer>
+      <a href="https://github.com/Ms-Schnitzel"><img src="./images/github.svg" alt="Github logo" class="socials"></a>
+      <a href="https://www.linkedin.com/in/zachery-nielsen-a2436523b/"><img src="./images/linkedin.svg" alt="Instagram logo" class="socials"></a>
+      <a href="https://www.instagram.com"><img src="./images/instagram.svg" alt="LinkedIn logo" class="socials"></a>
+      <div id="dates">
+        <p>&copy; <span id="currentYear"></span> | Zachery Nielsen | Utah, USA</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

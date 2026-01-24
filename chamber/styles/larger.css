@@ -30,10 +30,35 @@
  .grid-view {
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 
+  .company-img {
+    width: 290px;
+  }
+
   .buttons {
     grid-column: span 3;
   }
  } 
+
+ .index-grid {
+
+  h1 {
+    grid-column: span 1fr;
+  }
+
+  .cta {
+    grid-column: span 1fr;
+  }
+
+  #spotlight {
+    grid-column: span 2;
+  }
+
+  /* #events {
+
+  } */
+
+ }
+ 
 
   /* ==============  Footer  ============== */
 
