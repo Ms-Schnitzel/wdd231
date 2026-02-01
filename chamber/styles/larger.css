@@ -39,20 +39,37 @@
   }
  } 
 
+ .cta {
+    bottom: 8px;
+    right: 16px;
+    font-size: 1.2rem;
+    padding: 4px;
+  }
+
+  .cta a {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    padding: 0;
+    border-radius: 15px;
+    background-color: var(--secondary);
+    color: #000;
+  }
+
  .index-grid {
   grid-template-columns: 1fr 1fr;
   
   h1 {
-    grid-column: 1 / 2;
+    grid-column: span 2;
   }
 
-  .cta {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
+  
 
   #spotlight {
     grid-column: span 2;
+  }
+
+  #spotlight ul {
+    flex-direction: row;
   }
 
   /* #events {
