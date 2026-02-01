@@ -50,12 +50,12 @@
           <input type="text" id="last-name" name="last-name" title="Last Name" required pattern="[A-Za-z]*" autocomplete="family-name">
 
           <label for="title">Organitational Title</label>
-          <input type="text" id="title" name="title" title="Organizational Title" required pattern="[A-Za-z]*" autocomplete="organization-title">
+          <input type="text" id="title" name="title" title="Organizational Title" required pattern="[A-Za-z -]*{7}" autocomplete="organization-title">
 
           <hr>
           <h2>Contact Information</h2>
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" title="Email Address" required autocomplete="email">
+          <input type="email" id="email" name="email" title="Email Address" required autocomplete="email" placeholder="name@example.com">
 
           <label for="phone">Phone Number</label>
           <input type="tel" id="phone" name="phone" title="Phone Number" pattern="[0-9]{10}" required autocomplete="tel">
