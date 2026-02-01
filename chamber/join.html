@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Home Page</title>
+    <meta name="description" content="Home page for the West Valley City Chamber of Commerse where the community can navigate, reach out, discover, and learn how to join today!">
+    <meta name="author" content="Zachery Nielsen">
+    <meta property="og:title" content="Chamber of Commerce homepage for West Valley City">
+    <meta property="og:description" content="West Valley City Chamber of Commerce home page, providing networking and outreach opportunities for the community.">
+    <meta property="og:image" content="https://ms-schnitzel.github.io/wdd231/chamber/images/meta-logo.jpg">
+    <meta property="og:url" content="https://ms-schnitzel.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/date.js" defer></script>
+    <script src="./scripts/join.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./images/logo.jpg" alt="chamber logo" id="logo">
+        <h2>West Valley City Chamber of Commerce</h2>
+      </div>
+      <nav>
+        <a id="menu" href="#"></a>
+        <ul class="navbar">
+          <li><a href="index.html" id="home">Home</a></li>
+          <li><a href="directory.html" id="directory">Directory</a></li>
+          <li><a href="join.html" id="join">Join</a></li>
+          <li><a href="#" id="discover">Discover</a></li>
+        </ul>        
+      </nav>
+    </header>
+
+    <main class="join-page">
+      <h1>Join the Chamber of Commerce Today!</h1>
+      <form method="GET" action="thankyou.html" class="join-form">
+        <fieldset id="personal-info">
+          <h2>Personal Information</h2>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" title="First Name" required pattern="[A-Za-z]*" autocomplete="given-name">
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" title="Last Name" required pattern="[A-Za-z]*" autocomplete="family-name">
+
+          <label for="title">Organitational Title</label>
+          <input type="text" id="title" name="title" title="Organizational Title" required pattern="[A-Za-z]*" autocomplete="organization-title">
+
+          <hr>
+          <h2>Contact Information</h2>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" title="Email Address" required autocomplete="email">
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" title="Phone Number" pattern="[0-9]{10}" required autocomplete="tel">
+
+          <hr>
+          <h2>Business Information</h2>
+          <label for="business">Business Name</label>
+          <input type="text" id="business" name="business" title="Business Name" required autocomplete="organization">
+
+          <label for="membership">Membership Level</label>
+          <select name="membership" title="Membership Level" id="membership">
+            <option value="" selected disabled>-- membership level --</option>
+            <option value="Non-Profit">Non-Profit</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+          </select>
+
+          <label for="description">Business Description</label>
+          <textarea id="description" name="description" title="Business Description" rows="6" placeholder="Tell us about your business"></textarea>
+          
+          <input type="hidden" value="" id="timestamp" name="timestamp">
+          <input type="submit" value="Apply for Membership" id="submit-btn">
+        </fieldset>
+      </form>
+
+      <section class="mem-group">
+        <h2>Membership Levels</h2>
+        <div class="mem-card" id="non-prof">
+          <h3>Non Profit Membership </h3>
+          <p class="star non-prof-star">&#9733;</p>
+          <button id="non-prof-btn">Learn More</button>
+          <dialog id="non-prof-modal">
+            <h3>Non Profit Membership</h3>
+            <p>Cost: Free</p>
+            <h3>Benefits:</h3>
+            <ul>
+              <li>Monthly Newsletter</li>
+              <li>Directory Listings</li>
+              <li>Non-Profit Spotlights</li>
+            </ul>
+            <p class="star non-prof-star">&#9733;</p>
+            <button id="close-non-prof">❌</button>
+          </dialog>
+        </div>
+        <div class="mem-card" id="bronze">
+          <h3>Bronze Membership </h3>
+          <p class="star bronze-star">&#9733;</p>
+          <button id="bronze-btn">Learn More</button>
+          <dialog id="bronze-modal">
+            <h3>Bronze Tier Membership</h3>
+            <p>Cost: $350 per Year</p>
+            <h3>Benefits:</h3>
+            <ul>
+              <li>Monthly Newsletter</li>
+              <li>Directory Listings</li>
+              <li>Member-to-Member Discounts</li>
+            </ul>
+            <p class="star bronze-star">&#9733;</p>
+            <button id="close-bronze">❌</button>
+          </dialog>
+        </div>
+        <div class="mem-card" id="silver">
+          <h3>Silver Membership </h3>
+          <p class="star silver-star">&#9733;</p>
+          <button id="silver-btn">Learn More</button>
+          <dialog id="silver-modal">
+            <h3>Silver Tier Membership</h3>
+            <p>Cost: $500 per Year</p>
+            <h3>Benefits:</h3>
+            <ul>
+              <li>Monthly Newsletter</li>
+              <li>Enhanced Directory Listings</li>
+              <li>Member-to-Member Discounts</li>
+              <li>Advertisement Discounts</li>
+            </ul>
+            <p class="star silver-star">&#9733;</p>
+            <button id="close-silver">❌</button>
+          </dialog>
+        </div>
+        <div class="mem-card" id="gold">
+          <h3>Gold Membership </h3>
+          <p class="star gold-star">&#9733;</p>
+          <button id="gold-btn">Learn More</button>
+          <dialog id="gold-modal">
+            <h3>Gold Tier Membership</h3>
+            <p>Cost: $750 per Year</p>
+            <h3>Benefits:</h3>
+            <ul>
+              <li>Monthly Newsletter</li>
+              <li>Premium Directory Listings</li>
+              <li>Member-to-Member Discounts</li>
+              <li>Advertisement Discounts</li>
+              <li>Direct Chamber Leadership Access</li>
+            </ul>
+            <p class="star gold-star">&#9733;</p>
+            <button id="close-gold">❌</button>
+          </dialog>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <a href="https://github.com/Ms-Schnitzel"><img src="./images/github.svg" alt="Github logo" class="socials"></a>
+      <a href="https://www.linkedin.com/in/zachery-nielsen-a2436523b/"><img src="./images/linkedin.svg" alt="Instagram logo" class="socials"></a>
+      <a href="https://www.instagram.com"><img src="./images/instagram.svg" alt="LinkedIn logo" class="socials"></a>
+      <div id="dates">
+        <p>&copy; <span id="currentYear"></span> | Zachery Nielsen | Utah, USA</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

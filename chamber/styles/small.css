@@ -1,6 +1,8 @@
 :root {
   --primary: #023e8a;
+  /* rgb(2, 62, 138) */
   --secondary: #00b4d8;
+  /* rgb(0, 180, 216) */
   --background: "";
   --text: "";
 }
@@ -251,7 +253,246 @@ h1 {
   }
 }
 
+.join-page {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
+.join-page h1 {
+  grid-column: 1 / 2;
+}
+
+.join-form {
+  grid-column: 1 / 2;
+  margin: 1rem auto 2rem;
+  width: 90%;
+  max-width: 450px;
+  
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    border: solid 4px black;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  hr {
+    border: solid 0.5px rgba(2, 62, 138);
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  label {
+    margin-top: 0.5rem;
+  }
+
+  input {
+    max-width: 250px;
+  }
+
+  select {
+    max-width: 200px;
+  }
+
+  textarea {
+    max-width: 300px;
+  }
+
+  #submit-btn {
+    margin: 1rem auto 0;
+    padding: 10px;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px 7px;
+    border-radius: 25px;
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    margin: 0;
+    width: 60%;
+    border-bottom: solid 0.3px rgba(2, 62, 138, 50%);
+  }
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  20% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeIn4 {
+  0% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  30% {
+    opacity: 0;
+    transform: translate(25%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.mem-group {
+  grid-column: 1 / 2;
+  margin: 1rem auto 2rem;
+  width: 90%;
+  max-width: 450px;
+
+  .mem-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2rem;
+    max-height: 150px;
+    box-shadow: 5px 5px 7px #000, 5px 5px 10px #C0C0C0 inset;
+    /* opacity: 0; */
+    
+
+  }
+
+  #non-prof {
+    animation: fadeIn1 1s ease-out;
+  }
+  #bronze {
+    animation: fadeIn2 1.2s ease-out;
+    /* animation-delay: 0.5s; */
+  }
+  #silver {
+    animation: fadeIn3 1.4s ease-out;
+  }
+  #gold {
+    animation: fadeIn4 1.6s ease-out;
+  }
+
+  h3 {
+    margin: auto 0;
+    font-size: 1.5rem;
+  }
+
+  .star {
+    grid-row: span 2;
+    font-size: 5rem;
+    padding: 2px;
+    border: solid 0.3px;
+    border-radius: 50%;
+    background-color: black;
+    width: 5rem;
+    margin: auto;
+    /* height: 3rem; */
+  }
+  .non-prof-star {
+    color: #FF0000;
+  }
+  .bronze-star {
+    color: #A97142;
+  }
+  .silver-star {
+    color: #C0C0C0;
+  }
+  .gold-star {
+    color: #D4AF37;
+  }
+
+  button {
+    margin: 1rem auto 0;
+    padding: 10px;
+    background-color: var(--secondary);
+    box-shadow: 2px 2px 7px;
+    border-radius: 25px;
+    font-size: 1rem;
+  }
+
+  dialog{
+    padding: 1rem;
+    max-width: 300px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 7px #111, 5px 5px 10px #C0C0C0 inset;
+
+    &::backdrop {
+      background: rgba(0, 0, 0, 75%);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 3px;
+    }
+
+    h3, p, ul {
+      margin: 0.7rem;
+    }
+  }
+
+}
+
+#results {
+  width: 300px;
+  margin: 3rem auto;
+  text-align: center;
+  color: white;
+  border: solid 2px black;
+  background-color: var(--primary);
+  box-shadow: 5px 5px 7px #000, 5px 5px 10px #C0C0C0 inset;
+  border-radius: 15px;
+
+  hr {
+    border: solid 1px var(--secondary);
+  }
+
+  p {
+    margin: 0.5rem;
+    word-wrap: normal;
+  }
+}
 
 
 

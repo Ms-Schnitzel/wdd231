@@ -83,6 +83,8 @@ const cseBtn = document.querySelector("#cse");
 const wddBtn = document.querySelector("#wdd");
 const grid = document.querySelector("#course-grid");
 const credits = document.querySelector("#credits");
+const courseDetails = document.querySelector("#course-details");
+
 
 allBtn.addEventListener("click", function () {
   setDisplay("all");
@@ -98,6 +100,7 @@ wddBtn.addEventListener("click", function () {
 })
 
 const courseBox = (course) => {
+  
   return `
     <h3>${course.subject} ${course.number}</h3>
   `
@@ -112,6 +115,9 @@ const setDisplay = (subject) => {
   if (subject === "all") {
     for (let i = 0; i < courses.length; i++) {
       let newBox = document.createElement("div");
+      newBox.addEventListener("click", () => {
+        displayDetails(courses[i]);
+      });
       newBox.classList.add("course-box");
       if (courses[i].completed === true) {
         newBox.classList.add("completed");
@@ -127,11 +133,15 @@ const setDisplay = (subject) => {
     for (let i = 0; i < courses.length; i++) {
       if (courses[i].subject === "CSE") {
         let newBox = document.createElement("div");
+        newBox.addEventListener("click", () => {
+          displayDetails(courses[i]);
+        });
         newBox.classList.add("course-box");
         if (courses[i].completed === true) {
           newBox.classList.add("completed");
         }
         let newCourse = courseBox(courses[i]);
+
         newBox.innerHTML = newCourse;
         grid.appendChild(newBox);
       }
@@ -143,6 +153,9 @@ const setDisplay = (subject) => {
     for (let i = 0; i < courses.length; i++) {
       if (courses[i].subject === "WDD") {
         let newBox = document.createElement("div");
+        newBox.addEventListener("click", () => {
+          displayDetails(courses[i]);
+        });
         newBox.classList.add("course-box");
         if (courses[i].completed === true) {
           newBox.classList.add("completed");
@@ -185,8 +198,26 @@ const setCredits = (subject) => {
   }
 }
 
+const displayDetails = (course) => {
+  courseDetails.innerHTML = `
+    <button id="closeBtn">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
 
+  closeBtn.addEventListener("click", () => {
+    courseDetails.close();
+  });
+};
 
 
 setDisplay("all");
 setCredits("all");
+
+
+
