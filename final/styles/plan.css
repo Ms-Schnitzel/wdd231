@@ -1,0 +1,60 @@
+:root {
+  --primary: #012b09;
+  --secondary: #ecf0f4;
+  --accent: #94bb86;
+  --font: #404040;
+}
+
+* {
+  font-family: "Tinos", serif;
+}
+body {
+  max-width: 1200px;
+}
+
+header, footer {
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  background-color: var(--accent);
+}
+
+main h2 {
+  margin-top: 0;
+  padding: 0.5rem;
+  color: var(--primary);
+}
+main p {
+  color: var(--font);
+  padding: 0.5rem;
+}
+
+
+.primary {
+  color: var(--primary);
+  /* background-color: var(--font); */
+}
+.secondary {
+  color: var(--secondary);
+  background-color: var(--font);
+  width: 180px;
+}
+.accent {
+  color: var(--accent);
+  background-color: var(--font);
+  width: 160px;
+}
+.font {
+  color: var(--font);
+  /* background-color: var(--accent); */
+}
+
+img {
+  width: 80%;
+  max-width: 800px;
+  margin: 1rem;
+}
