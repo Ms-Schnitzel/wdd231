@@ -187,7 +187,7 @@ h1 {
   border: none;
   padding: 0;
   border-radius: none;
-  background-color: none;
+  background-color: transparent;
   color: var(--secondary);
 }
 
