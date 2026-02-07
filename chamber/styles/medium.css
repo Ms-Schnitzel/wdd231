@@ -1,0 +1,26 @@
+@media screen and (min-width: 641px) {
+  #discover-grid {
+    section {
+      grid-template-areas:
+      "image title"
+      "image address"
+      "image description"
+      "image button";
+    }
+
+    figure {
+      width: 300px;
+      max-width: 100%;
+    }
+
+    img {
+      transition: 1s;
+    }
+
+    img:hover {
+      transform: scale(1.03) translate(-9px, -9px);
+      /* transform: translate(5px, 5px); */
+      box-shadow: 5px 5px 7px #111;
+    }
+  }
+}

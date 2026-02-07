@@ -10,9 +10,9 @@
 * {
   font-family: "Tinos", serif;
 }
-body {
+/* body {
   max-width: 1200px;
-}
+} */
 
 /* =============== Header =============== */
 
@@ -512,6 +512,73 @@ h1 {
   }
 }
 
+#discover-grid {
+  section {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "image"
+    "address"
+    "description"
+    "button";
+    border: solid black 2px;
+    box-shadow: 5px 5px 7px #111, 5px 5px 10px #C0C0C0 inset;
+    border-radius: 25px;
+    background-color: darkgray;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 2em;
+    grid-area: title;
+    color: darkblue;
+  }
+
+  address {
+    grid-area: address;
+  }
+
+  p {
+    grid-area: description;
+    text-wrap: wrap;
+  }
+
+  figure {
+    grid-area: image;
+    
+    max-width: 90%;
+    /* margin: auto; */
+  }
+
+  img {
+    border: solid black 2px;
+    max-width: 100%;
+    /* object-fit: cover; */
+    /* height: 100%; */
+  }
+
+  button {
+    grid-area: button;
+    margin: auto;
+    font-size: 2rem;
+    background: black;
+    color: white;
+    border: solid white 2px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  
+}
+
+#welcome {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 
 
 /* ==============  Footer  ============== */
@@ -544,3 +611,4 @@ footer {
   padding-top: 20px;
   grid-column: span 1;
 }
+

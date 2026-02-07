@@ -105,3 +105,21 @@
   }
 
 }
+
+@media screen and (min-width: 1025px) {
+  #discover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section {
+      grid-template-areas:
+      /* "image title" */
+      "image title "
+      "image description "
+      "address button ";
+    }
+
+    figure {
+      margin: 0.5rem;
+    }
+  }
+}
