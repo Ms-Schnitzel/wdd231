@@ -28,7 +28,7 @@
   /* ==============  Body  ============== */
 
  .grid-view {
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
 
   .company-img {
     width: 290px;
