@@ -1,0 +1,71 @@
+@media screen and (max-width: 800px){
+
+/* =============== Header =============== */
+
+  header {
+    padding: 1em 1em 1em 5em;
+  }
+
+  header img {
+    top: 0.5em;
+  }
+
+  header h2 {
+    font-size: 1em;
+  }
+
+  nav a {
+    padding: 4px;
+    font-size: 1em;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    right: 20px;
+  }
+
+  #menu {
+    display: block;
+    padding-bottom: 4px;
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 50%;
+    width: 32px;
+  }
+
+  #menu::before {
+    content: "≡";
+  }
+
+  #menu.show::before {
+    content: "X";
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  /* ==============  Body  ============== */
+
+  main {
+    grid-template-areas:
+    "quick"
+    "study"
+    "recent";
+  }
+
+  /* ==============  Footer  ============== */
+
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #dates {
+    grid-column: span 3;
+  }
+}
