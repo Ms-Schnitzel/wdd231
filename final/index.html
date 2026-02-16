@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
     <script src="./scripts/date.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
-    <!-- <script type="module" src="./scripts/dictionary.mjs"></script> -->
     <script type="module" src="./scripts/quickDictionary.mjs"></script>
   </head>
   <body>
@@ -39,15 +38,15 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-home">
       <section id="quick-section" class="home-box">
         <h2>Quick Search</h2>
         <form class="quick-form">
           <fieldset>
             <label for="quick-search">Browse the Dictionary</label>
-            <input type="text" id="quick-search" name="quick-search" title="Browse the Dictionary" required pattern="[A-Za-z]*" placeholder="Search">
-            <button type="submit" id="quick-submit">&#x1F50E&#xFE0E</button>
-            <button id="clear-search" class="clear-btn">Clear Search</button>
+            <input type="text" id="quick-search" class="search" name="quick-search" title="Browse the Dictionary" required pattern="[A-Za-z]*" placeholder="Search">
+            <button type="submit" id="quick-submit" class="submit">&#x1F50E;&#xFE0E;</button>
+            <button id="clear-search" class="primary-btn">Clear Search</button>
           </fieldset>
         </form>
         <div id="quick-display"></div>
@@ -58,7 +57,7 @@
       </section>
       <section id="recent-section" class="home-box">
         <h2>Recent Searches</h2>
-        <button id="clear-recent" class="clear-btn">Clear Recent History</button>
+        <button id="clear-recent" class="primary-btn">Clear Recent History</button>
         <div id="recent-display"></div>
       </section>
     </main>

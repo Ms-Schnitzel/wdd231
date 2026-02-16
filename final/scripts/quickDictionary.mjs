@@ -1,4 +1,5 @@
 let history = JSON.parse(localStorage.getItem("history") || "[]");
+let study = JSON.parse(localStorage.getItem("study") || "[]");
 
 const quickForm = document.querySelector(".quick-form");
 const search = document.querySelector("#quick-search");
@@ -13,7 +14,7 @@ async function getData(word) {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     if (response.ok) {
       const data = await response.json();
-      console.log("Api result: ", data);
+      // console.log("Api result: ", data);
       history.push(data);
       localStorage.setItem("history", JSON.stringify(history));
       quickDisplay.innerHTML = "";
@@ -28,7 +29,7 @@ async function getData(word) {
 }
 
 // getData("hello");
-console.log("History initial load: ", history);
+// console.log("History initial load: ", history);
 
 quickForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -47,35 +48,37 @@ clearRecent.addEventListener("click", function (e) {
 
 
 const createDisplay = (def, parent) => {
-  def.forEach(function (i) {
+
+  for (let i = 0; i < 2; i++) {
+    if (def[i] === undefined) {
+      return;
+    }
     let wordBox = document.createElement("div");
     wordBox.classList.add("word-box");
     let name = document.createElement("h3");
-    name.textContent = i.word;
+    name.textContent = def[i].word;
     wordBox.appendChild(name);
-    i.meanings.forEach(function (j) {
-      console.log(j.partOfSpeech);
+    def[i].meanings.forEach(function (j) {
       let speech = document.createElement("h4");
-      speech.textContent = `Part of Speech: ${j.partOfSpeech}`;
-      wordBox.appendChild(speech);
+      speech.textContent = `Part of Speech: `;
+      let speechCont = document.createElement("p");
+      speechCont.textContent = j.partOfSpeech;
+      wordBox.append(speech, speechCont);
       for (let k = 0; k < 3; k++) {
         if (j.definitions[k] === undefined) {
           return;
         }
-        let definition = document.createElement("p");
-        definition.textContent = `Definition: ${j.definitions[k].definition}`;
-        wordBox.appendChild(definition);
+        let definition = document.createElement("h4");
+        definition.textContent = `Definition: `;
+        let definitionCont = document.createElement("p");
+        definitionCont.textContent = j.definitions[k].definition
+        wordBox.append(definition, definitionCont);
       }
-      // j.definitions.forEach(function (k) {
-      //   let definition = document.createElement("p");
-      //   definition.textContent = `Definition: ${k.definition}`;
-      //   wordBox.appendChild(definition);
-      // })
       let divider = document.createElement("hr");
       wordBox.appendChild(divider);
     })
     parent.appendChild(wordBox);
-  })
+  }
 }
 
 const showRecent = () => {
@@ -83,6 +86,7 @@ const showRecent = () => {
   let first = history.at(-1);
   let second = history.at(-2);
   let third = history.at(-3);
+  console.log(first);
 
   // let studyTopics = [];
   // studyTopics.push(first);
@@ -102,14 +106,9 @@ const showRecent = () => {
 }
 
 const showStudy = () => {
+  console.log(study);
   studyDisplay.innerHTML = "";
-
-  let studyTopics = JSON.parse(localStorage.getItem("studyTopics"));
-  if (studyTopics !== null) {
-    studyTopics.forEach(function (i) {
-      createDisplay(i, studyDisplay);
-    })
-  }
+  createDisplay(study, studyDisplay);
 }
 
 

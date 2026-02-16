@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
     <script src="./scripts/date.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
-    <!-- <script type="module" src="./scripts/dictionary.mjs"></script> -->
+    <script type="module" src="./scripts/flash.mjs"></script>
   </head>
   <body>
     <header>
@@ -38,10 +38,69 @@
       </nav>
     </header>
 
-    <main>
-      <section></section>
-      <section></section>
-      <section></section>
+    <main class="main-flash">
+      <section id="card-section" class="home-box">
+        <h2 id="flash-title">Flash Cards</h2>
+        <div id="flash-name"></div>
+      </section>
+      <section id="flash-btns" class="home-box">
+        <h2 id="study-title">Click here to begin studying!</h2>
+        <div class="flash-btns">
+          <button id="study" class="primary-btn">Study</button>
+          <button id="clear-study" class="primary-btn">Clear Study Items</button>
+        </div>
+      </section>
+      <section id="card-display">
+        <div id="flashcard"></div>
+      </section>
+      <dialog>
+        <div >
+          <h2>Please select the items you would like to include on your flashcards:</h2>
+          <form class="modal-menu">
+            <fieldset class="use-field">
+              <legend>How many meanings or uses of the word would you like to include?</legend>
+              <label for="single-meaning">
+                <input type="radio" id="single-meaning" name="meanings" value="single-meaning" required checked>
+                First Meaning
+              </label>
+              <label for="all-meaning">
+                <input type="radio" id="all-meaning" name="meanings" value="all-meaning" required>
+                All Meanings
+              </label>
+            </fieldset>
+            <fieldset class="def-field">
+              <legend>How many definitions of each use would you like to include?</legend>
+              <label for="single-def">
+                <input type="radio" id="single-def" name="definitions" value="single-def" required checked>
+                First Definition
+              </label>
+              <label for="all-def">
+                <input type="radio" id="all-def" name="definitions" value="all-def" required>
+                All Definitions
+              </label>
+            </fieldset>
+            <fieldset class="extra-field">
+              <legend>What other items would you like to include?</legend>
+              <label for="speech">
+                <input type="checkbox" id="speech" name="speech">
+                Part of Speech
+              </label>
+              <label for="phonetic">
+                <input type="checkbox" id="phonetic" name="phonetic">
+                Phonetics
+              </label>
+              <label for="example">
+                <input type="checkbox" id="example" name="example">
+                Example Usage
+              </label>
+            </fieldset>
+            <button type="submit" id="add-flash" class="primary-btn">Create Flash Card</button>
+          </form>
+          
+          <button id="close-modal">❌</button>
+        </div>
+        
+      </dialog>
     </main>
 
     <footer>
