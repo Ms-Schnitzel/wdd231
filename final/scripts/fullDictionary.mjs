@@ -10,7 +10,6 @@ async function getData(word) {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     if (response.ok) {
       const data = await response.json();
-      // console.log("Api result: ", data);
       history.push(data);
       localStorage.setItem("history", JSON.stringify(history));
       detailedDisplay.innerHTML = "";
@@ -123,9 +122,3 @@ const createDisplay = (def, parent) => {
     })
   })
 }
-
-
-
-
-// getData("hello");
-// console.log("History initial load: ", history);

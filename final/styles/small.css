@@ -81,7 +81,6 @@
   }
 
   #flashcard .word-box h3, h4, p {
-    /* grid-column: 2 / 3; */
     margin-right: auto;
   }
   /* ==============  Footer  ============== */

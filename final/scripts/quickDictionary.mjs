@@ -14,7 +14,6 @@ async function getData(word) {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     if (response.ok) {
       const data = await response.json();
-      // console.log("Api result: ", data);
       history.push(data);
       localStorage.setItem("history", JSON.stringify(history));
       quickDisplay.innerHTML = "";
@@ -28,8 +27,6 @@ async function getData(word) {
   }
 }
 
-// getData("hello");
-// console.log("History initial load: ", history);
 
 quickForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -87,13 +84,6 @@ const showRecent = () => {
   let second = history.at(-2);
   let third = history.at(-3);
   console.log(first);
-
-  // let studyTopics = [];
-  // studyTopics.push(first);
-  // studyTopics.push(second);
-  // studyTopics.push(third);
-  // localStorage.setItem("studyTopics", JSON.stringify(studyTopics))
-  
   if (first !== undefined) {
     createDisplay(first, recentDisplay);
   }

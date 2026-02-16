@@ -5,9 +5,6 @@ const closeModal = document.querySelector("#close-modal");
 const flashName = document.querySelector("#flash-name");
 const studyBtn = document.querySelector("#study");
 const flashBtn = document.querySelector("#add-flash");
-const form = document.querySelector("form");
-const useForm = form.querySelector("input[name=meanings]");
-const defForm = form.querySelector("input[name=definitions]");
 const flashDisplay = document.querySelector("#flashcard");
 const clearStudy = document.querySelector("#clear-study");
 
